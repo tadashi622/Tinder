@@ -34,9 +34,11 @@ class ViewController: UIViewController {
         if xFromCenter > 0 {
             likeImageView.image = UIImage(named: "good")
             likeImageView.alpha = 1
+            likeImageView.tintColor = UIColor.red
         }else if xFromCenter < 0 {
             likeImageView.image = UIImage(named: "bad")
             likeImageView.alpha = 1
+            likeImageView.tintColor = UIColor.blue
         }
         
         if sender.state == UIGestureRecognizer.State.ended{
