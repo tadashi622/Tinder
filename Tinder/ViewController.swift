@@ -41,6 +41,12 @@ class ViewController: UIViewController {
         basicCard.transform = .identity
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PushList" {
+            let vc = segue.destination as! ListViewController //UIViewControllerのListViewControllerとさらに指定
+            vc.likedName = likedName
+        }
+    }
 
     
     @IBAction func swipeCard(_ sender: UIPanGestureRecognizer) {
