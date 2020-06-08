@@ -32,6 +32,12 @@ class ViewController: UIViewController {
         people.append(person4)
         people.append(person5)
     }
+    
+    func resetCard(){
+       basicCard.center = self.centerOfCard
+        basicCard.transform = .identity
+    }
+    
 
     
     @IBAction func swipeCard(_ sender: UIPanGestureRecognizer) {
@@ -59,22 +65,30 @@ class ViewController: UIViewController {
             //左にスワイプ
             if card.center.x < 75 {
                 UIView.animate(withDuration: 0.2, animations: {
-                    card.center = CGPoint(x: card.center.x - 250, y: card.center.y)
+                    self.resetCard()
+                    self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x - 250, y: self.people[self.selectedCardCount].center.y)
                 })
+                likeImageView.alpha = 0
+                selectedCardCount += 1
+                
                 return  //この後の元に戻る処理をしたくない為、関数から抜ける
             //右にスワイプ
             }else if card.center.x > self.view.frame.width - 75 {
                 UIView.animate(withDuration: 0.2, animations: {
-                    card.center = CGPoint(x: card.center.x + 250, y: card.center.y)
+                    self.resetCard()
+                    self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x + 250, y: self.people[self.selectedCardCount].center.y)
                 })
+                likeImageView.alpha = 0
+                selectedCardCount += 1
                 return
             }
             
             
             //元に戻る処理
             UIView.animate(withDuration: 0.2, animations: {
-                card.center = self.centerOfCard
-                card.transform = .identity
+                self.resetCard()
+                self.people[self.selectedCardCount].center = self.centerOfCard//位置
+                self.people[self.selectedCardCount].transform = .identity//角度
             })
             likeImageView.alpha = 0
         }
