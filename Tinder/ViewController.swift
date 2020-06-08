@@ -74,7 +74,7 @@ class ViewController: UIViewController {
                 likeImageView.alpha = 0
                 selectedCardCount += 1
                 if selectedCardCount >= people.count{
-                    print(likedName)
+                    performSegue(withIdentifier: "PushList", sender: self)
                 }
                 return  //この後の元に戻る処理をしたくない為、関数から抜ける
             //右にスワイプ
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
                 likedName.append(name[selectedCardCount])
                 selectedCardCount += 1
                 if selectedCardCount >= people.count{
-                    print(likedName)
+                    performSegue(withIdentifier: "PushList", sender: self)
                 }
                 return
             }

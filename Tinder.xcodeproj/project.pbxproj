@@ -15,6 +15,7 @@
 		07C637552480D7FE007F9FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C637532480D7FE007F9FF6 /* LaunchScreen.storyboard */; };
 		07C637602480D7FF007F9FF6 /* TinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6375F2480D7FF007F9FF6 /* TinderTests.swift */; };
 		07C6376B2480D7FF007F9FF6 /* TinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6376A2480D7FF007F9FF6 /* TinderUITests.swift */; };
+		07C63779248E25C2007F9FF6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C63778248E25C2007F9FF6 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		07C637662480D7FF007F9FF6 /* TinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C6376A2480D7FF007F9FF6 /* TinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUITests.swift; sourceTree = "<group>"; };
 		07C6376C2480D7FF007F9FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C63778248E25C2007F9FF6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				07C637512480D7FE007F9FF6 /* Assets.xcassets */,
 				07C637532480D7FE007F9FF6 /* LaunchScreen.storyboard */,
 				07C637562480D7FE007F9FF6 /* Info.plist */,
+				07C63778248E25C2007F9FF6 /* ListViewController.swift */,
 			);
 			path = Tinder;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				07C6374D2480D7FA007F9FF6 /* ViewController.swift in Sources */,
 				07C637492480D7FA007F9FF6 /* AppDelegate.swift in Sources */,
+				07C63779248E25C2007F9FF6 /* ListViewController.swift in Sources */,
 				07C6374B2480D7FA007F9FF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
