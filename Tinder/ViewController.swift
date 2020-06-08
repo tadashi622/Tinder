@@ -49,6 +49,32 @@ class ViewController: UIViewController {
     }
 
     
+    @IBAction func likebuttonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.resetCard()
+            self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x + 500, y: self.people[self.selectedCardCount].center.y)
+        })
+        likeImageView.alpha = 0
+        likedName.append(name[selectedCardCount])
+        selectedCardCount += 1
+        if selectedCardCount >= people.count{
+            performSegue(withIdentifier: "PushList", sender: self)
+        }
+    }
+    
+    @IBAction func badbuttonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+           self.resetCard()
+           self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x - 500, y: self.people[self.selectedCardCount].center.y)
+       })
+       likeImageView.alpha = 0
+       selectedCardCount += 1
+       if selectedCardCount >= people.count{
+           performSegue(withIdentifier: "PushList", sender: self)
+       }
+    }
+    
+    
     @IBAction func swipeCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
         let point = sender.translation(in: view)
