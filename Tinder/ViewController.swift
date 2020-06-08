@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var basicCard: UIView!
+    @IBOutlet weak var likeImageView: UIImageView!
+    
     
     var centerOfCard:CGPoint!
     
@@ -25,6 +27,17 @@ class ViewController: UIViewController {
         let point = sender.translation(in: view)
         
         card.center = CGPoint(x: card.center.x + point.x, y: card.center.y + point.y)
+        
+        let xFromCenter = card.center.x - view.center.x //カードスワイプ時、真ん中からの距離
+        card.transform = CGAffineTransform(rotationAngle: xFromCenter / (view.frame.width / 2) * -0.785)//角度45度傾けてスワイプ感を出す
+        
+        if xFromCenter > 0 {
+            likeImageView.image = UIImage(named: "good")
+            likeImageView.alpha = 1
+        }else if xFromCenter < 0 {
+            likeImageView.image = UIImage(named: "bad")
+            likeImageView.alpha = 1
+        }
         
         if sender.state == UIGestureRecognizer.State.ended{
             //左にスワイプ
@@ -42,14 +55,15 @@ class ViewController: UIViewController {
             }
             
             
-            
             //元に戻る処理
             UIView.animate(withDuration: 0.2, animations: {
                 card.center = self.centerOfCard
+                card.transform = .identity
             })
-           
+            likeImageView.alpha = 0
         }
     }
+    
     
 }
 

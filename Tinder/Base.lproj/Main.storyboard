@@ -19,7 +19,7 @@
                                 <rect key="frame" x="20" y="87" width="374" height="406"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="original (2)" translatesAutoresizingMaskIntoConstraints="NO" id="lEv-FV-5EJ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="good" translatesAutoresizingMaskIntoConstraints="NO" id="lEv-FV-5EJ">
                                         <rect key="frame" x="123" y="139" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -36,6 +36,7 @@
                     </view>
                     <connections>
                         <outlet property="basicCard" destination="zLY-54-nS3" id="0bc-a0-bdl"/>
+                        <outlet property="likeImageView" destination="lEv-FV-5EJ" id="hZA-qB-vj8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -49,6 +50,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="original (2)" width="256" height="256"/>
+        <image name="good" width="256" height="256"/>
     </resources>
 </document>
